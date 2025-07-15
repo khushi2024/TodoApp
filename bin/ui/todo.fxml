@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.TodoController"
+            prefWidth="400" prefHeight="400">
+    <VBox spacing="10" alignment="CENTER" layoutX="20" layoutY="20" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.topAnchor="10">
+        <TextField fx:id="taskInput" promptText="Enter task title..." />
+        <HBox spacing="10">
+            <Button text="Add Task" onAction="#handleAddTask"/>
+            <Button text="Mark Done" onAction="#handleMarkComplete"/>
+            <Button text="Edit Task" onAction="#handleEditTask"/>
+            <Button text="Delete Task" onAction="#handleDeleteTask"/>
+        </HBox>
+        <ListView fx:id="taskList" prefHeight="300"/>
+    </VBox>
+</AnchorPane>
